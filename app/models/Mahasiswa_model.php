@@ -24,8 +24,8 @@ class Mahasiswa_model {
 
      public function tambahDataMahasiswa($data) 
      {
-       $query = "INSERT INTO " . $this->table . " VALUES ('0', :nrp, :nama, :email, :jurusan)";
-    
+       $query = "INSERT INTO " . $this->table . " VALUES ('0', :nama, :nrp, :email, :jurusan)";
+
         $this->db->query($query);
         $this->db->bind('nama', $data['nama']);
         $this->db->bind('nrp', $data['nrp']);
